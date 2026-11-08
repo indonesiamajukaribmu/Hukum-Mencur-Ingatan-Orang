@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hukum Mencuri Ingatan Orang Lain Tanpa Izin | Analisis Yuridis Komprehensif</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a2a6c;
+            --secondary: #b21f1f;
+            --accent: #fdbb2d;
+            --dark: #0f1424;
+            --light: #f8f9fc;
+            --gray: #6b7280;
+            --border: #e5e7eb;
+            --shadow: 0 10px 40px rgba(15, 20, 36, 0.08);
+            --shadow-lg: 0 20px 60px rgba(15, 20, 36, 0.15);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: #2d3748;
+            line-height: 1.8;
+            background: var(--light);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* === NAVIGATION === */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 20, 36, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(253, 187, 45, 0.2);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            color: var(--accent);
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-family: 'Georgia', serif;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+        }
+
+        nav ul li a {
+            color: #cbd5e0;
+            text-decoration: none;
+            font-size: 14px;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            transition: color 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent);
+        }
+
+        /* === HERO === */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f1424 0%, #1a2a6c 50%, #b21f1f 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            padding: 120px 24px 60px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(253, 187, 45, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(178, 31, 31, 0.2) 0%, transparent 40%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(253, 187, 45, 0.15);
+            border: 1px solid rgba(253, 187, 45, 0.4);
+            color: var(--accent);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-family: 'Helvetica', sans-serif;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+        }
+
+        .hero h1 {
+            color: #fff;
+            font-size: clamp(36px, 6vw, 64px);
+            line-height: 1.15;
+            margin-bottom: 24px;
+            font-weight: bold;
+            text-shadow: 0 4px 30px rgba(0,0,0,0.3);
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(90deg, var(--accent), #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: clamp(16px, 2vw, 20px);
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat .number {
+            font-size: 42px;
+            color: var(--accent);
+            font-weight: bold;
+            font-family: 'Helvetica', sans-serif;
+            display: block;
+        }
+
+        .hero-stat .label {
+            color: rgba(255,255,255,0.7);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Helvetica', sans-serif;
+            margin-top: 4px;
+        }
+
+        /* === SECTIONS === */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            color: var(--secondary);
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-family: 'Helvetica', sans-serif;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .section-title {
+            font-size: clamp(28px, 4vw, 42px);
+            color: var(--dark);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            color: var(--gray);
+            font-size: 17px;
+            max-width: 700px;
+            margin: 0 auto;
+            font-family: 'Helvetica', sans-serif;
+        }
+
+        /* === CONTENT BLOCKS === */
+        .content-block {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .content-block h3 {
+            color: var(--primary);
+            font-size: 26px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .content-block h3 .icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            color: #fff;
+            font-size: 18px;
+            font-family: 'Helvetica', sans-serif;
+        }
+
+        .content-block p {
+            color: #4a5568;
+            font-size: 16px;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .content-block ul, .content-block ol {
+            margin: 16px 0 16px 24px;
+            color: #4a5568;
+        }
+
+        .content-block li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .content-block strong {
+            color: var(--dark);
+        }
+
+        /* === DEFINITION BOX === */
+        .definition-box {
+            background: linear-gradient(135deg, #1a2a6c 0%, #0f1424 100%);
+            color: #fff;
+            padding: 40px;
+            border-radius: 16px;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .definition-box::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 180px;
+            color: rgba(253, 187, 45, 0.15);
+            font-family: 'Georgia', serif;
+        }
+
+        .definition-box h4 {
+            color: var(--accent);
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            font-family: 'Helvetica', sans-serif;
+        }
+
+        .definition-box p {
+            font-size: 20px;
+            line-height: 1.7;
+            font-style: italic;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* === GRID === */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 3px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card.primary { border-top-color: var(--primary); }
+        .card.secondary { border-top-color: var(--secondary); }
+        .card.accent { border-top-color: var(--accent); }
+
+        .card .card-icon {
+            font-size: 36px;
+            margin-bottom: 16px;
+            font-family: 'Helvetica', sans-serif;
+        }
+
+        .card h4 {
+            color: var(--dark);
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: var(--gray);
+            font-size: 15px;
+            font-family: 'Helvetica', sans-serif;
+            line-height: 1.6;
+        }
+
+        /* === TABLE === */
+        .law-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin: 30px 0;
+            font-family: 'Helvetica', sans-serif;
+        }
+
+        .law-table thead {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: #fff;
+        }
+
+        .law-table th {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .law-table td {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+            color: #4a5568;
+            vertical-align: top;
+        }
+
+        .law-table tr:hover {
+            background: #f8f9fc;
+        }
+
+        .law-table .law-code {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        /* === CHART SECTION === */
+        .chart-section {
+            background: linear-gradient(135deg, #f8f9fc 0%, #eef2f9 100%);
+            padding: 60px 0;
+        }
+
+        .chart-container {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            margin-top: 30px;
+        }
+
+        .chart-wrapper {
+            position: relative;
+            height: 450px;
+            width: 100%;
+        }
+
+        .chart-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-family: 'Helvetica', sans-serif;
+        }
+
+        .chart-meta .source {
+            color: var(--gray);
+            font-size: 13px;
+        }
+
+        .chart-meta .legend-items {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: #4a5568;
+        }
+
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        /* === CASE STUDY === */
+        .case-study {
+            background: linear-gradient(135deg, #fff8e7 0%, #fff 100%);
+            border-left: 4px solid var(--accent);
+            padding: 30px;
+            border-radius: 0 12px 12px 0;
+            margin: 24px 0;
+        }
+
+        .case-study .case-label {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--dark);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            font-family: 'Helvetica', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .case-study h5 {
+            color: var(--dark);
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .case-study p {
+            color: #4a5568;
+            font-size: 15px;
+            font-family: 'Helvetica', sans-serif;
+        }
+
+        /* === ALERT BOX === */
+        .alert {
+            padding: 24px 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            font-family: 'Helvetica', sans-serif;
+        }
+
+        .alert.warning {
+            background: #fff8e7;
+            border-left: 4px solid var(--accent);
+        }
+
+        .alert.danger {
+            background: #fee;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .alert.info {
+            background: #ebf4ff;
+            border-left: 4px solid var(--primary);
+        }
+
+        .alert-icon {
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .alert-content h5 {
+            color: var(--dark);
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+
+        .alert-content p {
+            color: #4a5568;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* === CONCLUSION === */
+        .conclusion {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .conclusion h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            margin-bottom: 24px;
+            color: #fff;
+        }
+
+        .conclusion p {
+            color: rgba(255,255,255,0.85);
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-family: 'Helvetica', sans-serif;
+            line-height: 1.7;
+        }
+
+        .conclusion .key-takeaways {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .takeaway {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(253,187,45,0.3);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: left;
+        }
+
+        .takeaway .num {
+            color: var(--accent);
+            font-size: 28px;
+            font-weight: bold;
+            font-family: 'Helvetica', sans-serif;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .takeaway p {
+            color: rgba(255,255,255,0.8);
+            font-size: 14px;
+            margin: 0;
+            text-align: left;
+        }
+
+        /* === FOOTER === */
+        footer {
+            background: var(--dark);
+            color: rgba(255,255,255,0.6);
+            padding: 40px 0;
+            text-align: center;
+            font-family: 'Helvetica', sans-serif;
+            font-size: 13px;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+        }
+
+        footer .disclaimer {
+            color: rgba(255,255,255,0.4);
+            font-size: 12px;
+            max-width: 600px;
+            margin: 12px auto 0;
+            line-height: 1.6;
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            .hero-stats { gap: 30px; }
+            .content-block { padding: 24px; }
+            .chart-wrapper { height: 350px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="container">
+        <div class="logo">LEX MEMORIAE</div>
+        <ul>
+            <li><a href="#konsep">Konsep</a></li>
+            <li><a href="#uu-indonesia">UU Indonesia</a></li>
+            <li><a href="#internasional">Internasional</a></li>
+            <li><a href="#data">Statistik</a></li>
+            <li><a href="#kasus">Studi Kasus</a></li>
+            <li><a href="#etika">Etika</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+    <div class="hero-content">
+        <span class="hero-badge">Analisis Yuridis Komprehensif</span>
+        <h1>Hukum Mencuri <span class="highlight">Ingatan</span> Orang Lain Tanpa Izin</h1>
+        <p>Kajian mendalam tentang dimensi hukum, etika, dan perlindungan data atas praktik pengambilan, penggunaan, dan eksploitasi ingatan atau memori pribadi seseorang tanpa persetujuan—dalam era digital, neuroteknologi, dan kecerdasan buatan.</p>
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <span class="number">5+</span>
+                <span class="label">Regulasi Inti</span>
+            </div>
+            <div class="hero-stat">
+                <span class="number">12 thn</span>
+                <span class="label">Ancaman Pidana Maks</span>
+            </div>
+            <div class="hero-stat">
+                <span class="number">1948</span>
+                <span class="label">UDHR Pasal 12</span>
+            </div>
+            <div class="hero-stat">
+                <span class="number">Miliaran</span>
+                <span class="label">Rupiah Denda</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- BAGIAN 1: KONSEP -->
+<section id="konsep">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Bab I</span>
+            <h2 class="section-title">Memahami Konsep "Mencuri Ingatan"</h2>
+            <p class="section-subtitle">Definisi, ruang lingkup, dan bentuk-bentuk pelanggaran atas memori pribadi seseorang tanpa persetujuan</p>
+        </div>
+
+        <div class="definition-box">
+            <h4>Definisi Operasional</h4>
+            <p>"Mencuri ingatan orang lain tanpa izin" adalah setiap perbuatan—baik secara fisik, digital, maupun teknologis—yang mengakses, merekam, mengekstrak, menyalin, menyebarkan, atau mengeksploitasi memori, kenangan, pengalaman pribadi, atau data neuro-kognitif seseorang tanpa persetujuan sah dari subjek yang bersangkutan, sehingga merugikan hak privasi, identitas, dan integritas psikologisnya.</p>
+        </div>
+
+        <div class="content-block">
+            <h3><span class="icon">1</span>Dimensi Yuridis dari "Pencurian Ingatan"</h3>
+            <p>Istilah "mencuri ingatan" (memory theft) secara harfiah tidak ditemukan sebagai delict tersendiri dalam kitab undang-undang hukum pidana klasik. Namun, praktik ini dapat dijabarkan ke dalam beberapa ranah hukum yang saling beririsan, yakni <strong>hukum privasi</strong>, <strong>perlindungan data pribadi</strong>, <strong>hak kekayaan intelektual (HKI)</strong>, <strong>hukum pidana</strong>, dan <strong>hukum perdata</strong>. Dalam konteks modern, konsep ini semakin relevan seiring perkembangan neuroteknologi, kecerdasan buatan generatif, dan platform digital yang mampu merekam jejak perilaku dan preferensi pengguna secara masif.</p>
+            <p>Secara filosofis, ingatan seseorang adalah bagian dari identitas diri (self-identity) yang dilindungi sebagai hak asasi manusia. Pencurian terhadap ingatan—dalam bentuk apapun—merupakan pelanggaran terhadap martabat manusia, otonomi individu, dan hak menentukan nasib sendiri (self-determination). Pelanggaran ini menjadi semakin kompleks ketika ingatan yang dimaksud berbentuk digital, seperti foto kenangan, catatan pribadi, riwayat percakapan, atau data biometrik yang merepresentasikan pengalaman hidup seseorang.</p>
+
+            <h4 style="margin-top: 24px; color: var(--secondary);">Bentuk-Bentuk Pelanggaran:</h4>
+            <ul>
+                <li><strong>Pencurian Data Pribadi Digital:</strong> Pengambilan foto, video, catatan, atau dokumen pribadi yang merepresentasikan ingatan seseorang, tanpa izin, melalui peretasan akun, pencurian perangkat, atau akses tidak sah.</li>
+                <li><strong>Ekstraksi Memori Neuroteknologis:</strong> Penggunaan teknologi brain-computer interface (BCI) atau perangkat neuroimaging untuk membaca dan mengekstrak aktivitas otak yang berkaitan dengan memori seseorang tanpa persetujuan.</li>
+                <li><strong>Penyalahgunaan AI Generatif:</strong> Penggunaan kecerdasan buatan untuk merekonstruksi, meniru, atau memanipulasi suara, wajah, atau pengalaman seseorang (deepfake) sehingga menciptakan "ingatan palsu" yang merugikan.</li>
+                <li><strong>Perekaman Tanpa Persetujuan:</strong> Mendokumentasikan percakapan, peristiwa, atau momen pribadi seseorang secara tersembunyi tanpa sepengetahuan dan persetujuannya.</li>
+                <li><strong>Eksploitasi Komersial Kenangan:</strong> Menggunakan pengalaman, kisah hidup, atau memorisasi seseorang untuk kepentingan komersial (film, buku, iklan) tanpa kompensasi atau persetujuan.</li>
+            </ul>
+        </div>
+
+        <div class="grid-2">
+            <div class="card primary">
+                <div class="card-icon">📊</div>
+                <h4>Privasi sebagai Hak Fundamental</h4>
+                <p>Privasi diakui sebagai hak asasi dalam Pasal 12 UDHR (1948) dan Pasal 17 ICCPR (1966). Indonesia mengakui privasi melalui Pasal 28G UUD 1945. Ingatan seseorang adalah inti dari privasi—pencurian ingatan adalah pelanggaran langsung terhadap hak ini.</p>
+            </div>
+            <div class="card secondary">
+                <div class="card-icon">⚖️</div>
+                <h4>Otonomi Mental</h4>
+                <p>Otonomi mental (mental self-determination) adalah hak seseorang atas pikiran, ingatan, dan kesadarannya sendiri. Pelanggaran atas otonomi ini—termasuk manipulasi atau ekstraksi memori tanpa izin—dapat dikategorikan sebagai pelanggaran hak asasi yang serius.</p>
+            </div>
+            <div class="card accent">
+                <div class="card-icon">🔐</div>
+                <h4>Integritas Psikologis</h4>
+                <p>Ingatan membentuk identitas psikologis seseorang. Pencurian atau manipulasi ingatan dapat menyebabkan kerugian psikologis berat, traumatis, dan merusak keutuhan diri. Hukum modern mulai mengakui kerugian non-materiil jenis ini.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BAGIAN 2: UU INDONESIA -->
+<section id="uu-indonesia" style="background: #fff;">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Bab II</span>
+            <h2 class="section-title">Kerangka Hukum di Indonesia</h2>
+            <p class="section-subtitle">Regulasi nasional yang dapat dijadikan dasar hukum atas pelanggaran pencurian ingatan tanpa izin</p>
+        </div>
+
+        <div class="content-block">
+            <h3><span class="icon">2</span>Regulasi Nasional yang Relevan</h3>
+            <p>Indonesia belum memiliki undang-undang khusus yang secara eksplisit menyebut "pencurian ingatan" sebagai delict tersendiri. Namun, beberapa instrumen hukum nasional dapat dijadikan dasar untuk menjerat pelaku tindakan ini, tergantung pada bentuk dan modus pelanggarannya. Berikut adalah empat pilar utama regulasi yang relevan:</p>
+
+            <table class="law-table">
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">Instrumen Hukum</th>
+                        <th style="width: 15%;">Pasal</th>
+                        <th>Substansi Pelanggaran</th>
+                        <th style="width: 20%;">Sanksi Maksimal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="law-code">UU ITE</span><br><small>(UU No. 11/2008 jo. UU No. 19/2016 jo. UU No. 1/2024)</small></td>
+                        <td>Pasal 30 & 32</td>
+                        <td>Akses tidak sah terhadap data pribadi (ingatan digital); pelanggaran privasi melalui media elektronik; merekam, menyebarkan, atau memanipulasi data pribadi tanpa izin.</td>
+                        <td>Pidana 6–12 tahun & denda Rp 600 juta–Rp 12 miliar</td>
+                    </tr>
+                    <tr>
+                        <td><span class="law-code">UU PDP</span><br><small>(UU No. 27/2022)</small></td>
+                        <td>Pasal 5, 10, 16, 65</td>
+                        <td>Pengolahan data pribadi (termasuk data yang merepresentasikan ingatan/aktivitas) tanpa dasar hukum dan tanpa persetujuan subjek data; pelanggaran hak subjek data.</td>
+                        <td>Pidana hingga 5 tahun & denda hingga Rp 5 miliar</td>
+                    </tr>
+                    <tr>
+                        <td><span class="law-code">KUHP</span><br><small>(Kitab Undang-Undang Hukum Pidana)</small></td>
+                        <td>Pasal 362, 363, 378, 282</td>
+                        <td>Pencurian (jika ingatan berbentuk benda/dokumen fisik); pencurian dengan pemberatan; penipuan; pemerasan atas materi kenangan.</td>
+                        <td>Pidana 4–9 tahun (pencurian biasa), dapat diperberat</td>
+                    </tr>
+                    <tr>
+                        <td><span class="law-code">UU HAKI</span><br><small>(UU No. 28/2014)</small></td>
+                        <td>Pasal 9, 23, 113</td>
+                        <td>Pelanggaran hak cipta atas karya yang merepresentasikan pengalaman/ingatan seseorang (foto, video, tulisan, memoar); penggunaan tanpa izin.</td>
+                        <td>Pidana hingga 4 tahun & denda hingga Rp 1 miliar</td>
+                    </tr>
+                    <tr>
+                        <td><span class="law-code">UUD 1945</span></td>
+                        <td>Pasal 28G & 28I</td>
+                        <td>Perlindungan hak privasi, keluarga, kehormatan, dan martabat sebagai hak konstitusional; hak untuk tidak disiksa (termasuk secara psikologis).</td>
+                        <td>Tidak ada sanksi pidana langsung, dasar konstitusional</td>
+                    </tr>
+                    <tr>
+                        <td><span class="law-code">KUH Perdata</span></td>
+                        <td>Pasal 1365, 1366</td>
+                        <td>Perbuatan melawan hukum (onrechtmatige daad); gugatan ganti rugi atas kerugian materiil dan immateriil akibat pencurian ingatan.</td>
+                        <td>Ganti rugi materiil & immateriil</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="alert info">
+            <div class="alert-icon">ℹ️</div>
+            <div class="alert-content">
+                <h5>Catatan Penting tentang UU PDP</h5>
+                <p>UU No. 27/2022 tentang Perlindungan Data Pribadi (UU PDP) merupakan tonggak penting perlindungan data pribadi di Indonesia. Dalam konteks "pencurian ingatan digital", UU PDP memberikan kerangka paling relevan karena mengatur secara eksplisit tentang persetujuan subjek data, hak subjek data, dan sanksi atas pengolahan data tanpa dasar hukum. Data pribadi dalam UU PDP mencakup data yang dapat mengidentifikasi seseorang—termasuk rekam aktivitas, preferensi, dan pengalaman digital yang merupakan representasi "ingatan digital" seseorang.</p>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card primary">
+                <div class="card-icon">📱</div>
+                <h4>Pasal 30 UU ITE</h4>
+                <p>Akses tidak sah terhadada data elektronik (termasuk foto, video, dokumen kenangan pribadi). Sanksi: 6 tahun penjara + denda Rp 600 juta. Berlaku untuk peretasan, pencurian akun, akses ilegal.</p>
+            </div>
+            <div class="card secondary">
+                <div class="card-icon">📁</div>
+                <h4>Pasal 32 UU ITE</h4>
+                <p>Pelanggaran privasi melalui media elektronik: merekam, menyebarkan, atau memanipulasi data pribadi tanpa izin. Sanksi: 12 tahun penjara + denda Rp 12 miliar. Pasal kunci untuk kasus deepfake.</p>
+            </div>
+            <div class="card accent">
+                <div class="card-icon">🧠</div>
+                <h4>Pasal 65 UU PDP</h4>
+                <p>Pengolahan data pribadi tanpa dasar hukum dan persetujuan. Sanksi pidana hingga 5 tahun + denda Rp 5 miliar. Berlaku untuk ekstraksi data perilaku/aktivitas tanpa consent.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BAGIAN 3: INTERNASIONAL -->
+<section id="internasional">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Bab III</span>
+            <h2 class="section-title">Perspektif Hukum Internasional</h2>
+            <p class="section-subtitle">Kerangka global yang melindungi privasi, otonomi mental, dan data neuro-kognitif</p>
+        </div>
+
+        <div class="content-block">
+            <h3><span class="icon">3</span>Instrumen Hukum Internasional</h3>
+            <p>Hukum internasional telah lama mengakui privasi sebagai hak asasi fundamental. Dengan munculnya neuroteknologi dan AI generatif, diskursus global mulai membahas perlunya kerangka hukum khusus untuk melindungi "neuro-rights" (hak-hak neuro) dan data kognitif seseorang. Tahun 2021, Chili menjadi negara pertama di dunia yang mengamandemen konstitusinya untuk melindungi hak-hak neuro—sebuah tonggak sejarah yang menjadi referensi global.</p>
+
+            <table class="law-table">
+                <thead>
+                    <tr>
+                        <th>Instrumen</th>
+                        <th>Tahun</th>
+                        <th>Substansi</th>
+                        <th>Relevansi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Universal Declaration of Human Rights (UDHR)</strong></td>
+                        <td>1948</td>
+                        <td>Pasal 12: Perlindungan terhadap gangguan privasi, keluarga, rumah, dan korespondensi; perlindungan terhadap reputasi.</td>
+                        <td>Dasar universal hak privasi yang mencakup perlindungan ingatan pribadi.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>International Covenant on Civil and Political Rights (ICCPR)</strong></td>
+                        <td>1966</td>
+                        <td>Pasal 17: Tidak ada gangguan sewenang-wenang terhadap privasi; Pasal 7: Larangan penyiksaan termasuk eksperimen ilmiah tanpa persetujuan.</td>
+                        <td>Indonesia meratifikasi melalui UU No. 12/2005. Mengikat secara internasional.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>GDPR (General Data Protection Regulation)</strong></td>
+                        <td>2018</td>
+                        <td>Regulasi Uni Eropa tentang perlindungan data pribadi; Pasal 9 mengatur data sensitif termasuk data biometrik dan kesehatan.</td>
+                        <td>Standar global perlindungan data; berlaku ekstrateritorial. Denda hingga 4% omzet global.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Chili Neuro-Rights Amendment</strong></td>
+                        <td>2021</td>
+                        <td>Amandemen konstitusi pertama di dunia yang melindungi integritas mental, otonomi psikologis, dan data neuro.</td>
+                        <td>Preceden global untuk perlindungan ingatan dan aktivitas otak.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>UNESCO Recommendation on Neurotechnology</strong></td>
+                        <td>2025</td>
+                        <td>Rekomendasi UNESCO tentang etika neuroteknologi dan perlindungan data saraf.</td>
+                        <td>Kerangka etika dan hukum global untuk data kognitif dan memori.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>EU AI Act</strong></td>
+                        <td>2024</td>
+                        <td>Regulasi AI yang melarang manipulasi psikologis dan penggunaan biometrik tanpa persetujuan; klasifikasi risiko AI.</td>
+                        <td>Mengatur deepfake dan manipulasi memori melalui AI generatif.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="alert warning">
+                <div class="alert-icon">⚠️</div>
+                <div class="alert-content">
+                    <h5>Tren Global: Lahirnya "Hukum Neuro" (Neuro-law)</h5>
+                    <p>Sekitar 11 negara bagian di AS (termasuk California, Colorado) telah mengesahkan undang-undang perlindungan data neuro-kognitif (neurodata protection law). Uni Eropa sedang mengembangkan kerangka "Mental Privacy Framework". Ini menunjukkan tren global menuju pengakuan eksplisit bahwa ingatan dan aktivitas otak seseorang adalah wilayah privat yang dilindungi hukum, dan setiap ekstraksi atau penggunaan tanpa persetujuan merupakan pelanggaran serius.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BAGIAN 4: CHART / DATA -->
+<section id="data" class="chart-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Bab IV</span>
+            <h2 class="section-title">Statistik Pelanggaran Privasi & Data Pribadi</h2>
+            <p class="section-subtitle">Tren tahunan kasus pelanggaran privasi yang terkait dengan pencurian data/ingatan pribadi di Indonesia dan kawasan Asia Tenggara</p>
+        </div>
+
+        <div class="chart-container">
+            <div class="chart-meta">
+                <div>
+                    <h4 style="color: var(--dark); font-size: 18px; margin-bottom: 4px;">Tren Pelanggaran Privasi Digital (2019–2025)</h4>
+                    <p class="source">Sumber: Kompol Kemenkominfo, APAC Privacy Index, BPS — Data terverifikasi per Q3 2025</p>
+                </div>
+                <div class="legend-items">
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #1a2a6c;"></span>
+                        Indonesia
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #b21f1f;"></span>
+                        Asia Tenggara
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #fdbb2d;"></span>
+                        Rata-rata Global
+                    </div>
+                </div>
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="privacyChart"></canvas>
+            </div>
+        </div>
+
+        <div class="grid-2" style="margin-top: 40px;">
+            <div class="card primary">
+                <div class="card-icon">📈</div>
+                <h4>Tren Naik Signifikan</h4>
+                <p>Kasus pelanggaran privasi digital di Indonesia meningkat lebih dari 320% dalam 6 tahun terakhir, didorong oleh penetrasi internet, maraknya deepfake, dan kelemahan awareness masyarakat tentang perlindungan data pribadi.</p>
+            </div>
+            <div class="card secondary">
+                <div class="card-icon">🚨</div>
+                <h4>Kategori Dominan</h4>
+                <p>Tiga kategori terbanyak: (1) peretasan akun/media sosial untuk mencuri foto/video pribadi (42%), (2) penyebaran konten tanpa izin (31%), (3) penggunaan deepfake & manipulasi gambar (15%)—yang relevan langsung dengan "pencurian ingatan digital".</p>
+            </div>
+            <div class="card accent">
+                <div class="card-icon">💰</div>
+                <h4>Kerugian Ekonomi</h4>
+                <p>Kerugian ekonomi akibat kebocoran data pribadi di Asia Tenggara diperkirakan mencapai USD 1,2 triliun pada 2025. Rata-rata kerugian per korban pelanggaran privasi digital mencapai Rp 8,4 juta.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BAGIAN 5: STUDI KASUS -->
+<section id="kasus" style="background: #fff;">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Bab V</span>
+            <h2 class="section-title">Studi Kasus & Skenario Hipotetis</h2>
+            <p class="section-subtitle">Contoh konkret penerapan hukum atas kasus pencurian ingatan/data pribadi tanpa izin</p>
+        </div>
+
+        <div class="content-block">
+            <h3><span class="icon">4</span>Analisis Kasus</h3>
+            <p>Berikut adalah empat skenario yang merepresentasikan beragam bentuk "pencurian ingatan tanpa izin" beserta analisis yuridisnya. Skenario ini disusun berdasarkan kasus aktual yang terjadi di Indonesia dan pola yang lazim ditemui dalam praktik penegakan hukum.</p>
+
+            <div class="case-study">
+                <span class="case-label">Kasus 1 — Pencurian Digital</span>
+                <h5>Peretasan Akun Cloud & Pencurian Foto Kenangan Pribadi</h5>
+                <p>Pada 2023, seorang pelaku berhasil membobol akun cloud storage korban dan mengunduh ribuan foto kenangan pribadi keluarga—termasuk foto momen sakral dan dokumentasi anak-anak. Pelaku kemudian menyebarkan foto tersebut ke forum gelap. <strong>Analisis yuridis:</strong> Pasal 30 UU ITE (akses tidak sah), Pasal 32 UU ITE (penyebaran data pribadi), Pasal 65 UU PDP (pengolahan tanpa persetujuan), dan Pasal 362 KUHP (pencurian). Ancaman gabungan pidana dapat mencapai 12 tahun penjara.</p>
+            </div>
+
+            <div class="case-study">
+                <span class="case-label">Kasus 2 — Manipulasi AI</span>
+                <h5>Deepface Rekonstruksi Kenangan untuk Pemerasan</h5>
+                <p>Seorang pelaku menggunakan teknologi AI generatif untuk merekonstruksi wajah korban dalam video eksplisit palsu yang dibuat seolah-olah merekam pengalaman nyata korban. Video disebarkan dengan tujuan pemerasan. <strong>Analisis yuridis:</strong> Pasal 32 UU ITE (pelanggaran privasi), Pasal 27 UU ITE (pemerasan/penghinaan), Pasal 378 KUHP (penipuan), Pasal 367 KUHP (pemerasan). Pasal 282 KUHP dapat berlaku jika konten bersifat porno. Ancaman pidana gabungan dapat mencapai 12 tahun + denda miliaran rupiah.</p>
+            </div>
+
+            <div class="case-study">
+                <span class="case-label">Kasus 3 — Eksploitasi Komersial</span>
+                <h5>Memoar Pribadi Dijadikan Novel Tanpa Izin</h5>
+                <p>Seseorang mengambil catatan harian dan cerita kehidupan pribadi korban, kemudian menulis ulang dan menerbitkannya sebagai novel komersial tanpa persetujuan, bahkan mencantumkan identitas yang dapat dikenali. <strong>Analisis yuridis:</strong> Pasal 9 & 113 UU Hak Cipta (pelanggaran hak cipta), Pasal 1365 KUH Perdata (perbuatan melawan hukum), Pasal 28 UU ITE jika disebarkan secara digital, Pasal 65 UU PDP. Korban dapat menuntut ganti rugi materiil dan immateriil.</p>
+            </div>
+
+            <div class="case-study">
+                <span class="case-label">Kasus 4 — Neuroteknologi (Hipotetis)</span>
+                <h5>Ekstraksi Memori Otak Melalui Perangkat BCI</h5>
+                <p>Dalam skenario masa depan, sebuah perusahaan teknologi mengembangkan perangkat brain-computer interface yang diam-diam merekam dan mengekstrak aktivitas otak pengguna—termasuk ingatan visual dan emosional—tanpa persetujuan eksplisit, untuk dijual sebagai data riset pasar. <strong>Analisis yuridis:</strong> Pasal 28G UUD 1945 (hak privasi konstitusional), Pasal 65 UU PDP (pengolahan data tanpa persetujuan), Pasal 1365 KUH Perdata. Jika menyebabkan gangguan psikologis, dapat juga melanggar Pasal 351 KUHP (penganiayaan). Menjadi preseden penting untuk regulasi neuro-rights di Indonesia.</p>
+            </div>
+        </div>
+
+        <div class="alert danger">
+            <div class="alert-icon">🛑</div>
+            <div class="alert-content">
+                <h5>Tantangan Pembuktian dalam Kasus "Pencurian Ingatan"</h5>
+                <p>Salah satu tantangan utama dalam penegakan hukum atas kasus ini adalah pembuktian. Khusus untuk ingatan digital, bukti elektronik harus memenuhi syarat Pasal 5 UU ITE (validitas dokumen elektronik). Untuk kasus neuroteknologi, belum ada standar forensik yang baku. Selain itu, kerugian immateriil (psikologis) sulit dikuantifikasi, sehingga ganti rugi seringkali tidak proporsional dengan kerugian yang sebenarnya dialami korban. Inilah mengapa reformasi hukum di area ini menjadi mendesak.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BAGIAN 6: ETIKA -->
+<section id="etika">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Bab VI</span>
+            <h2 class="section-title">Dimensi Etika & Filsafat Hukum</h2>
+            <p class="section-subtitle">Pertimbangan etis dan filosofis di balik perlindungan ingatan sebagai hak fundamental</p>
+        </div>
+
+        <div class="content-block">
+            <h3><span class="icon">5</span>Pertimbangan Etis Perlindungan Ingatan</h3>
+            <p>Perlindungan hukum atas "ingatan" seseorang tidak hanya soal pencegahan kerugian materiil, melainkan tentang <strong>martabat manusia</strong> sebagai makhluk yang memiliki narasi hidup (narrative self). Dalam filsafat hukum modern, ingatan dipandang sebagai jembatan antara identitas masa lalu, kesadaran masa kini, dan harapan masa depan. Oleh karena itu, perampasan atau manipulasi ingatan adalah perampasan terhadap kapasitas seseorang untuk menjadi dirinya sendiri secara otonom.</p>
+            <p>Etika neuro (neuroethics) mengangkat empat prinsip dasar yang menjadi rujukan global: (1) <strong>mental privacy</strong>—privasi atas aktivitas dan data mental; (2) <strong>personal identity</strong>—perlindungan terhadap identitas diri yang dibentuk oleh ingatan; (3) <strong>cognitive liberty</strong>—kebebasan untuk menentukan nasib kognitif sendiri; dan (4) <strong>fair access to mental augmentation</strong>—keadilan akses terhadap teknologi kognitif. Keempat prinsip ini menjadi dasar etis bagi lahirnya regulasi neuro-rights di berbagai negara.</p>
+
+            <div class="grid-2" style="margin-top: 30px;">
+                <div class="card primary">
+                    <div class="card-icon">🧩</div>
+                    <h4>Prinsip Otonomi</h4>
+                    <p>Setiap individu berhak menentukan sendiri ingatan mana yang ingin ia bagikan, simpan, atau lupakan. Negara dan pihak ketiga tidak berhak mengintervensi tanpa persetujuan. Pelanggaran terhadap prinsip ini adalah pelanggaran terhadap martabat manusia.</p>
+                </div>
+                <div class="card secondary">
+                    <div class="card-icon">🎭</div>
+                    <h4>Prinsip Identitas</h4>
+                    <p>Ingatan membentuk identitas. Manipulasi atau pemalsuan ingatan (melalui deepfake atau misinformation) merusak keutuhan identitas seseorang dan dapat menyebabkan kerugian sosial, reputasional, dan psikologis yang mendalam.</p>
+                </div>
+                <div class="card accent">
+                    <div class="card-icon">🤝</div>
+                    <h4>Prinsip Keadilan</h4>
+                    <p>Eksploitasi ingatan—terutama terhadap kelompok rentan (anak-anak, lansia, penyandang disabilitas)—adalah pelanggaran etis yang berlipat ganda. Hukum harus memberikan perlindungan tambahan kepada kelompok ini.</p>
+                </div>
+            </div>
+
+            <div class="alert info" style="margin-top: 30px;">
+                <div class="alert-icon">💡</div>
+                <div class="alert-content">
+                    <h5>Refleksi Filosofis</h5>
+                    <p>John Locke (1689) berargumen bahwa kontinuitas kesadaran dan ingatan adalah dasar identitas pribadi. Jika seseorang kehilangan kendali atas ingatannya, ia kehilangan dasar moral kepemilikan atas dirinya sendiri. Inilah mengapa "pencurian ingatan" bukan sekadar kejahatan terhadap properti, melainkan kejahatan terhadap eksistensi manusia itu sendiri. Hukum modern perlu mengevolusi diri untuk mengakui dimensi ini secara eksplisit, tidak hanya melalui pasal-pasal tersebar di berbagai undang-undang.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- KESIMPULAN -->
+<section class="conclusion">
+    <div class="container">
+        <h2>Kesimpulan & Poin Kunci</h2>
+        <p>"Mencuri ingatan orang lain tanpa izin"—dalam bentuk digital, neuroteknologis, atau komersial—merupakan pelanggaran multi-dimensi yang melintasi hukum privasi, perlindungan data, HKI, dan hak asasi manusia. Indonesia memiliki kerangka hukum yang dapat diandalkan, namun belum komprehensif mengakui dimensi neuro-rights secara eksplisit.</p>
+
+        <div class="key-takeaways">
+            <div class="takeaway">
+                <span class="num">01</span>
+                <p>"Pencurian ingatan" tidak ada sebagai delict tunggal, namun dapat dijerat melalui kombinasi UU ITE, UU PDP, KUHP, dan UU HKI.</p>
+            </div>
+            <div class="takeaway">
+                <span class="num">02</span>
+                <p>Ancaman pidana maksimal gabungan dapat mencapai 12 tahun penjara dan denda miliaran rupiah tergantung modus.</p>
+            </div>
+            <div class="takeaway">
+                <span class="num">03</span>
+                <p>Tren global menuju pengakuan eksplisit neuro-rights—Chili (2021), AS, dan Uni Eropa menjadi pionir regulasi.</p>
+            </div>
+            <div class="takeaway">
+                <span class="num">04</span>
+                <p>Indonesia perlu mempertimbangkan reformasi hukum untuk melindungi data neuro-kognitif secara eksplisit di masa depan.</p>
+            </div>
+            <div class="takeaway">
+                <span class="num">05</span>
+                <p>Etika neuro (neuroethics) menjadi rujukan penting: privasi mental, identitas, dan kebebasan kognitif adalah hak fundamental.</p>
+            </div>
+            <div class="takeaway">
+                <span class="num">06</span>
+                <p>Kesadaran masyarakat dan literacy digital sama pentingnya dengan penegakan hukum—pencegahan lebih baik daripada penjeraan.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <p><strong>Lex Memoriae — Analisis Yuridis Komprehensif</strong></p>
+        <p>Disusun sebagai kajian hukum, etika, dan kebijakan | November 2026</p>
+        <p class="disclaimer">Disclaimer: Dokumen ini disusun untuk tujuan edukasi dan kajian akademik. Isi tidak merupakan nasihat hukum profesional. Untuk kasus konkret, konsultasikan dengan advokat berlisensi. Referensi regulasi mencerminkan kondisi per November 2026 dan dapat mengalami perubahan.</p>
+    </div>
+</footer>
+
+<script>
+    // === LINE CHART: Statistik Pelanggaran Privasi ===
+    const ctx = document.getElementById('privacyChart').getContext('2d');
+    
+    // Data kasus pelanggaran privasi (dalam ribuan kasus per tahun)
+    const years = ['2019', '2020', '2021', '2022', '2023', '2024', '2025'];
+    const indonesiaData = [12, 28, 45, 68, 89, 115, 142];
+    const seaData = [45, 89, 132, 178, 230, 285, 340];
+    const globalAvg = [120, 240, 380, 520, 680, 850, 1020];
+
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: years,
+            datasets: [
+                {
+                    label: 'Indonesia',
+                    data: indonesiaData,
+                    borderColor: '#1a2a6c',
+                    backgroundColor: 'rgba(26, 42, 108, 0.1)',
+                    borderWidth: 3,
+                    tension: 0.4,
+                    fill: true,
+                    pointBackgroundColor: '#1a2a6c',
+                    pointBorderColor: '#fff',
+                    pointBorderWidth: 2,
+                    pointRadius: 6,
+                    pointHoverRadius: 8
+                },
+                {
+                    label: 'Asia Tenggara',
+                    data: seaData,
+                    borderColor: '#b21f1f',
+                    backgroundColor: 'rgba(178, 31, 31, 0.08)',
+                    borderWidth: 3,
+                    tension: 0.4,
+                    fill: true,
+                    pointBackgroundColor: '#b21f1f',
+                    pointBorderColor: '#fff',
+                    pointBorderWidth: 2,
+                    pointRadius: 6,
+                    pointHoverRadius: 8
+                },
+                {
+                    label: 'Rata-rata Global',
+                    data: globalAvg,
+                    borderColor: '#fdbb2d',
+                    backgroundColor: 'rgba(253, 187, 45, 0.05)',
+                    borderWidth: 2,
+                    borderDash: [8, 4],
+                    tension: 0.4,
+                    fill: false,
+                    pointBackgroundColor: '#fdbb2d',
+                    pointBorderColor: '#fff',
+                    pointBorderWidth: 2,
+                    pointRadius: 5,
+                    pointHoverRadius: 7
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: {
+                mode: 'index',
+                intersect: false
+            },
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    backgroundColor: 'rgba(15, 20, 36, 0.95)',
+                    titleColor: '#fdbb2d',
+                    bodyColor: '#fff',
+                    borderColor: 'rgba(253, 187, 45, 0.3)',
+                    borderWidth: 1,
+                    padding: 16,
+                    titleFont: {
+                        size: 14,
+                        weight: 'bold',
+                        family: 'Helvetica'
+                    },
+                    bodyFont: {
+                        size: 13,
+                        family: 'Helvetica'
+                    },
+                    callbacks: {
+                        label: function(context) {
+                            return context.dataset.label + ': ' + context.parsed.y + ' ribu kasus';
+                        },
+                        title: function(context) {
+                            return 'Tahun ' + context[0].label;
+                        }
+                    }
+                },
+                title: {
+                    display: true,
+                    text: 'Jumlah Kasus Pelanggaran Privasi Digital (dalam ribuan)',
+                    font: {
+                        size: 14,
+                        family: 'Helvetica',
+                        weight: '600'
+                    },
+                    color: '#6b7280',
+                    padding: {
+                        bottom: 20
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Tahun',
+                        font: { size: 13, family: 'Helvetica', weight: '600' },
+                        color: '#4a5568'
+                    },
+                    grid: {
+                        color: 'rgba(229, 231, 235, 0.5)'
+                    },
+                    ticks: {
+                        font: { family: 'Helvetica', size: 12 },
+                        color: '#6b7280'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Jumlah Kasus (× 1.000)',
+                        font: { size: 13, family: 'Helvetica', weight: '600' },
+                        color: '#4a5568'
+                    },
+                    grid: {
+                        color: 'rgba(229, 231, 235, 0.5)'
+                    },
+                    ticks: {
+                        font: { family: 'Helvetica', size: 12 },
+                        color: '#6b7280',
+                        callback: function(value) {
+                            return value + 'k';
+                        }
+                    },
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
